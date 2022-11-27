@@ -8,7 +8,7 @@ plugins {
 
 group = "com.codely"
 version = "0.0.1-SNAPSHOT"
-java.sourceCompatibility = JavaVersion.VERSION_11
+java.sourceCompatibility = JavaVersion.VERSION_17
 
 repositories {
     mavenCentral()
@@ -21,6 +21,11 @@ dependencies {
     implementation("com.diffplug.spotless:spotless-plugin-gradle:5.7.0")
 
     testImplementation("org.jetbrains.kotlin:kotlin-test")
+    testImplementation("org.assertj:assertj-core:3.23.1")// https://mvnrepository.com/artifact/org.assertj/assertj-core
+//                testImplementation("org.mockito:mockito-core:4.9.0")    // https://mvnrepository.com/artifact/org.mockito/mockito-core
+
+    testImplementation("io.mockk:mockk:1.13.2")// https://mvnrepository.com/artifact/io.mockk/mockk
+
 }
 application {
     mainClass.set("com.codely.demo.CodelyberKt")
